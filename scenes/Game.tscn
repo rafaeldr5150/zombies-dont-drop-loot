@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="1"]
+[ext_resource type="Script" path="res://scripts/rooms/RoomManager.gd" id="2"]
+
+[node name="Game" type="Node2D"]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="RoomsContainer" type="Node2D" parent="World"]
+
+[node name="RoomManager" type="Node" parent="."]
+script = ExtResource("2")
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(160, 96)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="HPLabel" type="Label" parent="HUD"]
+position = Vector2(8, 8)
+text = "HP: 100/100"
+
+[node name="AmmoLabel" type="Label" parent="HUD"]
+position = Vector2(8, 28)
+text = "Munição: 12/12"
