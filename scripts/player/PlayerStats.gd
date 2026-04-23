@@ -1,7 +1,7 @@
 class_name PlayerStats
 extends Resource
 
-@export var character_name: String = "Matheus"  # ZeroRespawn online
+@export var character_name: String = "Joey"  # ZeroRespawn online
 
 # Vida
 @export var max_hp: int = 100
